@@ -1,0 +1,19 @@
+.home {
+  position: relative;
+}
+
+.home-section {
+  min-height: 100vh;
+}
+
+.home-section--one {
+  background-color: var(--bg-primary);
+}
+
+.home-section--two {
+  background-color: var(--bg-secondary);
+}
+
+.home-section--three {
+  background-color: var(--bg-primary);
+}
