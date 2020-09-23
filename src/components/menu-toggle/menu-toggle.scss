@@ -1,0 +1,39 @@
+@import "../../main.scss";
+
+.menu-toggle {
+  position: absolute;
+  right: 10%;
+  top: 3.8rem;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  height: 35px;
+
+  &-btn {
+    position: relative;
+    height: 100%;
+    padding: 0 1rem;
+    text-transform: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: calc(100% - 2rem);
+      transform: translateX(-50%);
+      bottom: 1px;
+      left: 50%;
+      background-color: $bg-primary;
+    }
+
+    &:hover {
+      color: $brand-accent;
+    }
+
+    &:hover::after {
+      background-color: $brand-accent;
+    }
+  }
+}

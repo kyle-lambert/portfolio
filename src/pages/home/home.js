@@ -1,12 +1,25 @@
-import React from "react";
-import "./home.css";
+import React, { useState } from "react";
+import "./home.scss";
+
+// import Header from "../../components/header/header";
+// import Navigation from "../../components/navigation/navigation";
+import PageTag from "../../components/page-tag/page-tag";
+import MenuToggle from "../../components/menu-toggle/menu-toggle";
+import HomeHero from "../../components/home-hero/home-hero";
 
 function Home(props) {
+  const [open, setOpen] = useState(false);
+
+  const handleToggle = () => setOpen((prev) => !prev);
+
   return (
     <div className="home">
-      <section className="home-section home-section--one"></section>
-      <section className="home-section home-section--two"></section>
-      <section className="home-section home-section--three"></section>
+      {/* <Header handleToggle={handleToggle} open={open} /> */}
+      {/* <Navigation open={open} /> */}
+
+      <PageTag text="Kyle Lambert" />
+      <MenuToggle />
+      <HomeHero />
     </div>
   );
 }

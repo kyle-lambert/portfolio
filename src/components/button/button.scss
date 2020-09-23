@@ -1,0 +1,38 @@
+@import "../../main.scss";
+
+.button,
+.button--outline {
+  font-size: 1.6rem;
+  font-weight: inherit;
+  text-transform: inherit;
+  padding: 1.4rem 2rem;
+  border: 1px solid $text-primary;
+
+  @media (min-width: $medium) {
+    padding: 1.8rem 2.4rem;
+  }
+
+  @media (min-width: $large) {
+    padding: 2.2rem 2.8rem;
+  }
+}
+
+.button {
+  background-color: $bg-primary;
+  color: $text-secondary;
+
+  &:hover {
+    background-color: $bg-secondary;
+    color: $text-primary;
+  }
+}
+
+.button--outline {
+  background-color: $bg-secondary;
+  color: $text-primary;
+
+  &:hover {
+    background-color: $bg-primary;
+    color: $text-secondary;
+  }
+}
