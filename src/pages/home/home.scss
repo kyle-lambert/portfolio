@@ -2,4 +2,8 @@
 
 .home {
   position: relative;
+
+  &-scrollblock {
+    position: fixed;
+  }
 }

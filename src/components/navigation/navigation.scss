@@ -1,0 +1,113 @@
+@import "../../main.scss";
+
+// .navigation {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: $brand-accent;
+//   z-index: 199;
+
+//   &-list {
+//     grid-column: 2 / 3;
+//     grid-row: 2 / 3;
+//     color: $bg-secondary;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     padding: 1.8rem 0;
+//   }
+
+//   &-item {
+//     display: flex;
+//     align-items: center;
+//     border-bottom: 1px solid $bg-secondary;
+//     padding: 1.8rem 0;
+
+//     &:last-child {
+//       border-bottom: none;
+//     }
+//   }
+
+//   &-number {
+//     display: block;
+//     flex: 2;
+//     font-size: 7rem;
+//     font-weight: 900;
+//     font-style: italic;
+//     color: $text-primary;
+//     -webkit-text-stroke-color: $bg-secondary;
+//     -webkit-text-stroke-width: 1px;
+//   }
+
+//   &-link {
+//     cursor: pointer;
+//     display: inline-block;
+//     padding: 0 0.5rem;
+//     color: transparent;
+//     font-size: 7rem;
+//     font-weight: 900;
+//     font-style: italic;
+//     color: $text-secondary;
+//   }
+
+//   &-name {
+//     flex: 4;
+//     overflow: hidden;
+//   }
+// }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $brand-accent;
+  z-index: 199;
+
+  &-list {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    color: $bg-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.8rem 0;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $bg-secondary;
+    padding: 0 1.8rem;
+  }
+
+  &-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &-number {
+    display: block;
+    flex: 2;
+    font-size: 8rem;
+    font-weight: 900;
+    font-style: italic;
+    color: $text-primary;
+    -webkit-text-stroke-color: $bg-secondary;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  &-name {
+    flex: 4;
+    font-size: 7rem;
+    font-weight: 900;
+    font-style: italic;
+    color: $text-secondary;
+  }
+}
