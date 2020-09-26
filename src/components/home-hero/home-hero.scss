@@ -3,7 +3,6 @@
 .home-hero {
   position: relative;
   min-height: 100vh;
-  background-color: $bg-secondary;
 
   &-inner {
     grid-column: 2 / 3;
@@ -11,60 +10,63 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 3.8rem;
+    padding: 2.8rem 0;
+  }
+
+  &-subheading {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: inherit;
+    color: $text-tertiary;
+    margin-bottom: 1.4rem;
   }
 
   &-heading {
     font-weight: 900;
-    font-style: italic;
-    font-size: 3.5rem;
-    line-height: 1.4;
+    font-size: 4rem;
     text-transform: initial;
-    color: transparent;
-    -webkit-text-stroke-color: $text-primary;
-    -webkit-text-stroke-width: 1px;
+    color: $text-primary;
 
     @media (min-width: $small) {
-      font-size: 4rem;
-    }
-    @media (min-width: $medium) {
       font-size: 4.5rem;
     }
-    @media (min-width: $large) {
+    @media (min-width: $medium) {
       font-size: 5rem;
     }
-    @media (min-width: $xlarge) {
-      font-size: 6rem;
+    @media (min-width: $large) {
+      font-size: 6.5rem;
     }
-
-    .solid {
-      color: $bg-primary;
+    @media (min-width: $xlarge) {
+      font-size: 7.5rem;
     }
   }
 
   &-link {
     display: inline-block;
+    font-size: 1.5rem;
     position: relative;
     padding: 1rem 0;
     font-weight: inherit;
     flex-grow: 0;
+    transition: all 200ms ease;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 5px;
       left: 0;
-      height: 2px;
+      height: 1px;
       width: 100%;
-      background-color: $bg-primary;
+      background-color: $bg-secondary;
+      transition: background-color 200ms ease;
     }
 
     &:hover {
-      color: $brand-accent;
+      color: $brand-primary;
     }
 
     &:hover::after {
-      background-color: $brand-accent;
+      background-color: $brand-primary;
     }
   }
 

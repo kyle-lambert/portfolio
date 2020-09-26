@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import "./navigation.scss";
+import "./mobile-nav.scss";
 
 import PageTag from "../page-tag/page-tag";
 import SectionGrid from "../../layout/section-grid/section-grid";
@@ -20,17 +20,22 @@ const routes = [
   },
   {
     id: 2,
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    id: 3,
     name: "About",
     path: "/about",
   },
   {
-    id: 3,
+    id: 4,
     name: "Contact",
     path: "/contact",
   },
 ];
 
-function Navigation({ open }) {
+function MobileNav({ open }) {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
@@ -40,18 +45,14 @@ function Navigation({ open }) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={transition}
-            className="navigation">
+            className="mobile-nav">
             <PageTag text="Navigation" dark />
             <SectionGrid>
-              <ul className="navigation-list">
+              <ul className="mobile-nav-list">
                 {routes.map((r) => (
-                  <motion.li
-                    whileHover={{ scale: 1.05 }}
-                    key={uuidv4()}
-                    className="navigation-item">
-                    <Link to={r.path} className="navigation-link">
-                      <span className="navigation-number">{`0${r.id}`}</span>
-                      <h1 className="navigation-name">{r.name}</h1>
+                  <motion.li key={uuidv4()} className="mobile-nav-item">
+                    <Link to={r.path} className="mobile-nav-link">
+                      <h1 className="mobile-nav-name">{r.name}</h1>
                     </Link>
                   </motion.li>
                 ))}
@@ -64,4 +65,4 @@ function Navigation({ open }) {
   );
 }
 
-export default Navigation;
+export default MobileNav;

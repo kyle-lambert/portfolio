@@ -1,0 +1,73 @@
+@import "../../main.scss";
+
+.navbar {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  padding-right: 5%;
+  background-color: $brand-primary;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: auto;
+  z-index: 299;
+  overflow: hidden;
+
+  &-mobile {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+
+    @media (min-width: $medium) {
+      display: none;
+    }
+  }
+
+  &-desktop {
+    display: none;
+    padding-left: 0.5rem;
+
+    @media (min-width: $medium) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $text-primary;
+    transition: color 200ms ease;
+
+    &:hover {
+      color: $brand-secondary;
+      transition: color 200ms ease;
+    }
+  }
+
+  &-btn {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $text-primary;
+    transition: color 200ms ease;
+
+    &:hover {
+      color: $brand-secondary;
+      transition: color 200ms ease;
+    }
+  }
+
+  &-spacer {
+    color: $text-primary;
+    margin: 0 1rem;
+  }
+}

@@ -7,7 +7,7 @@ import SectionGrid from "../../layout/section-grid/section-grid";
 function HomeProjects(props) {
   return (
     <section className="home-projects">
-      <PageTag text="Featured Projects." dark />
+      <PageTag text="Featured Projects" />
       <SectionGrid>
         <div className="home-projects-inner"></div>
       </SectionGrid>

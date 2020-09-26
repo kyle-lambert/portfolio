@@ -1,12 +1,19 @@
 @import "../../main.scss";
 
-.button,
-.button--outline {
-  font-size: 1.6rem;
+.button {
+  font-size: 1.5rem;
   font-weight: inherit;
-  text-transform: inherit;
   padding: 1.4rem 2rem;
-  border: 1px solid $text-primary;
+  border: 1px solid $bg-secondary;
+  background-color: transparent;
+  color: $text-primary;
+  transition: all 200ms ease;
+
+  &:hover {
+    color: $brand-primary;
+    border: 1px solid $brand-primary;
+    transition: all 200ms ease;
+  }
 
   @media (min-width: $medium) {
     padding: 1.8rem 2.4rem;
@@ -14,25 +21,5 @@
 
   @media (min-width: $large) {
     padding: 2rem 2.6rem;
-  }
-}
-
-.button {
-  background-color: $bg-primary;
-  color: $text-secondary;
-
-  &:hover {
-    background-color: $bg-secondary;
-    color: $text-primary;
-  }
-}
-
-.button--outline {
-  background-color: $bg-secondary;
-  color: $text-primary;
-
-  &:hover {
-    background-color: $bg-primary;
-    color: $text-secondary;
   }
 }

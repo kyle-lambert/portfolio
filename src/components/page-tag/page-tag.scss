@@ -3,39 +3,21 @@
 .page-tag {
   position: absolute;
   left: 0;
-  top: 3rem;
+  top: 5rem;
   display: flex;
   align-items: center;
   height: 35px;
   padding-left: 10%;
   z-index: 99;
   overflow: hidden;
-
-  @media (min-width: $medium) {
-    top: 6rem;
-  }
+  background-color: $brand-primary;
 
   &-span {
     font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: inherit;
+    font-weight: 700;
     letter-spacing: 2px;
     margin-right: 1rem;
+    color: inherit;
   }
-}
-
-// light variation
-.page-tag[data-light="true"] {
-  background-color: $bg-primary;
-}
-.page-tag[data-light="true"] .page-tag-span {
-  color: $text-secondary;
-}
-
-// dark variation
-.page-tag[data-dark="true"] {
-  background-color: $bg-secondary;
-}
-.page-tag[data-dark="true"] .page-tag-span {
-  color: $text-primary;
 }
