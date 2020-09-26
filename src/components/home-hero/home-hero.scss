@@ -9,14 +9,14 @@
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 2.8rem 0;
+    justify-content: flex-end;
+    // padding-top: 4.8rem;
   }
 
   &-subheading {
     display: block;
-    font-size: 1.4rem;
-    font-weight: inherit;
+    font-size: 1.6rem;
+    font-weight: 400;
     color: $text-tertiary;
     margin-bottom: 1.4rem;
   }
@@ -41,57 +41,15 @@
     }
   }
 
-  &-link {
-    display: inline-block;
-    font-size: 1.5rem;
-    position: relative;
-    padding: 1rem 0;
-    font-weight: inherit;
-    flex-grow: 0;
-    transition: all 200ms ease;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: $bg-secondary;
-      transition: background-color 200ms ease;
-    }
-
-    &:hover {
-      color: $brand-primary;
-    }
-
-    &:hover::after {
-      background-color: $brand-primary;
-    }
-  }
-
   &-list {
     display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    margin-top: 3.8rem;
+    align-items: center;
     flex-wrap: wrap;
-
-    @media (min-width: $medium) {
-      flex-direction: row;
-      margin-top: 5.2rem;
-    }
+    margin-top: 4.8rem;
   }
 
   &-item {
-    flex-shrink: 0;
-    margin: 0.5rem 0;
-    margin-right: 3.8rem;
-    display: flex;
-    align-items: center;
-
-    @media (min-width: $medium) {
-      margin-right: 4.8rem;
-    }
+    margin: 1rem 0;
+    margin-right: 2.5rem;
   }
 }

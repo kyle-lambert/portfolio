@@ -1,0 +1,17 @@
+@import "../../main.scss";
+
+.hyperlink {
+  display: inline-block;
+  padding: 1.8rem 2.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border: 1px solid $bg-secondary;
+  transition: all 200ms ease;
+
+  &:hover {
+    background-color: $brand-secondary;
+    color: $text-secondary;
+    border: 1px solid $brand-secondary;
+    transition: all 200ms ease;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./home-hero.scss";
 
-import Button from "../button/button";
+import Hyperlink from "../hyperlink/hyperlink";
 import SectionGrid from "../../layout/section-grid/section-grid";
 
 function HomeHero(props) {
@@ -16,17 +16,10 @@ function HomeHero(props) {
           </h1>
           <ul className="home-hero-list">
             <li className="home-hero-item">
-              <Button text="Download Resume" />
+              <Hyperlink href="#">Github Profile</Hyperlink>
             </li>
             <li className="home-hero-item">
-              <a href="/" className="home-hero-link">
-                LinkedIn
-              </a>
-            </li>
-            <li className="home-hero-item">
-              <a href="/" className="home-hero-link">
-                Github
-              </a>
+              <Hyperlink href="#">LinkedIn Profile</Hyperlink>
             </li>
           </ul>
         </div>

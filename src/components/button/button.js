@@ -1,9 +1,9 @@
 import React from "react";
 import "./button.scss";
 
-function Button({ text, outline }) {
+function Button({ text }) {
   return (
-    <button type="button" className={outline ? "button--outline" : "button"}>
+    <button type="button" className={"button"}>
       {text}
     </button>
   );
