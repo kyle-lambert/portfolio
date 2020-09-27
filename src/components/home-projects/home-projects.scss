@@ -1,4 +1,4 @@
-@import "../../main.scss";
+@import "../../styles/variables";
 
 .home-projects {
   position: relative;
@@ -8,9 +8,6 @@
   &-inner {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    // padding: 2.8rem 0;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+    padding: 2.8rem 0;
   }
 }

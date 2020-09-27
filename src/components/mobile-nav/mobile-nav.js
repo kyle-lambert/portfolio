@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import "./mobile-nav.scss";
 
-import PageTag from "../page-tag/page-tag";
 import SectionGrid from "../../layout/section-grid/section-grid";
 
 const transition = {
@@ -35,29 +34,32 @@ const routes = [
   },
 ];
 
-function MobileNav({ open }) {
+function MobileNav({ open, handleClose }) {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
         {open && (
           <motion.nav
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
             transition={transition}
             className="mobile-nav">
-            <PageTag text="Navigation" dark />
-            <SectionGrid>
-              <ul className="mobile-nav-list">
-                {routes.map((r) => (
-                  <motion.li key={uuidv4()} className="mobile-nav-item">
-                    <Link to={r.path} className="mobile-nav-link">
-                      <h1 className="mobile-nav-name">{r.name}</h1>
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </SectionGrid>
+            <button
+              type="button"
+              onClick={handleClose}
+              className="mobile-nav-close">
+              Close
+            </button>
+            <ul className="mobile-nav-list">
+              {routes.map((r) => (
+                <li key={uuidv4()} className="mobile-nav-item">
+                  <Link to={r.path} className="mobile-nav-link">
+                    <h1 className="mobile-nav-name">{r.name}</h1>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </motion.nav>
         )}
       </AnimatePresence>

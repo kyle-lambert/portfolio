@@ -26,53 +26,36 @@ const routes = [
   },
 ];
 
-function Navbar({ open, toggle }) {
+function Navbar({ handleOpen }) {
   return (
-    <motion.header
-      initial={{ x: "100%" }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-      className="navbar">
+    <header className="navbar">
       <nav className="navbar-nav">
         <motion.ul
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.3, delay: 0.4, ease: "easeOut" }}
           className="navbar-desktop">
-          <li className="navbar-item">
-            <Link className="navbar-link" to="/">
-              Home
-            </Link>
-          </li>
-          <span className="navbar-spacer">/</span>
-          <li className="navbar-item">
-            <Link className="navbar-link" to="/projects">
-              Projects
-            </Link>
-          </li>
-          <span className="navbar-spacer">/</span>
-          <li className="navbar-item">
-            <Link className="navbar-link" to="/about">
-              About
-            </Link>
-          </li>
-          <span className="navbar-spacer">/</span>
-          <li className="navbar-item">
-            <Link className="navbar-link" to="/contact">
-              Contact
-            </Link>
-          </li>
+          {routes.map((r) => (
+            <li key={r.id} className="navbar-item">
+              <Link className="navbar-link" to={r.path}>
+                {r.name}
+              </Link>
+            </li>
+          ))}
         </motion.ul>
-
-        <ul className="navbar-mobile">
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.4, ease: "easeOut" }}
+          className="navbar-mobile">
           <li className="navbar-item">
-            <button type="button" onClick={toggle} className="navbar-btn">
-              {open ? "Close" : "Menu"}
+            <button type="button" onClick={handleOpen} className="navbar-btn">
+              Menu
             </button>
           </li>
-        </ul>
+        </motion.ul>
       </nav>
-    </motion.header>
+    </header>
   );
 }
 

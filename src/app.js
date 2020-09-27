@@ -22,8 +22,12 @@ function App(props) {
     }
   };
 
-  const handleToggle = () => {
-    setOpen((prev) => !prev);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   useEffect(() => {
@@ -42,8 +46,8 @@ function App(props) {
 
   return (
     <div className="app">
-      <MobileNav open={open} />
-      <Navbar open={open} toggle={handleToggle} />
+      <MobileNav open={open} handleClose={handleClose} />
+      <Navbar handleOpen={handleOpen} />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Projects} />

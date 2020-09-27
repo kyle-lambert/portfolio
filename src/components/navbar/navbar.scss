@@ -1,22 +1,20 @@
-@import "../../main.scss";
+@import "../../styles/variables";
 
 .navbar {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 5rem;
-  padding-right: 5%;
-  background-color: $brand-primary;
+  background-color: transparent;
   display: flex;
   align-items: center;
   height: 35px;
   width: auto;
-  z-index: 299;
+  z-index: 199;
   overflow: hidden;
 
   &-mobile {
     display: flex;
     align-items: center;
-    padding-left: 0.5rem;
 
     @media (min-width: $medium) {
       display: none;
@@ -25,7 +23,6 @@
 
   &-desktop {
     display: none;
-    padding-left: 0.5rem;
 
     @media (min-width: $medium) {
       display: flex;
@@ -35,39 +32,33 @@
 
   &-link {
     display: inline-block;
-    text-transform: uppercase;
     padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: $text-primary;
-    transition: color 200ms ease;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 1rem;
+    color: $text-tertiary;
 
     &:hover {
-      color: $brand-secondary;
-      transition: color 200ms ease;
+      color: $text-primary;
     }
   }
 
   &-btn {
     display: inline-block;
-    text-transform: uppercase;
     padding: 1rem;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: $text-primary;
-    transition: color 200ms ease;
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $text-tertiary;
 
     &:hover {
-      color: $brand-secondary;
-      transition: color 200ms ease;
+      color: $text-primary;
     }
   }
 
   &-spacer {
     color: $text-primary;
-    margin: 0 1rem;
+    font-weight: 700;
+    margin: 0 0.5rem;
   }
 }

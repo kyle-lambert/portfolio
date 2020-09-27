@@ -1,14 +1,31 @@
-@import "../../main.scss";
+@import "../../styles/variables";
 
 .mobile-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background-color: $brand-secondary;
+  height: 40vh;
+  background-color: $brand-primary;
   overflow: hidden;
-  z-index: 199;
+  z-index: 599;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 2px 0 50px rgba(0, 0, 0, 1);
+
+  &-close {
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+    z-index: 799;
+    font-size: 1.5rem;
+    color: $text-secondary;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
 
   &-list {
     grid-column: 2 / 3;
@@ -16,35 +33,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.8rem 0;
+    padding: 1.2rem 0;
+    margin: 2.8rem 0;
   }
 
   &-item {
-    border-bottom: 2px solid $bg-secondary;
-    padding: 2rem 0;
+    padding: 0.8rem 0;
   }
 
   &-name {
-    font-size: 5rem;
-    font-weight: 900;
-    color: $brand-primary;
-    transition: color 200ms ease;
-
-    @media (min-width: $small) {
-      font-size: 6rem;
-    }
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $text-secondary;
   }
 
   &-link {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
     cursor: pointer;
     overflow: hidden;
 
     &:hover .mobile-nav-name {
       color: $text-primary;
-      transition: color 200ms ease;
     }
   }
 }
